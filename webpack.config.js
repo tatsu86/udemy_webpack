@@ -62,6 +62,10 @@ module.exports = {
       template: './src/templates/access.pug',
       filename: 'access.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/members/tarou.pug',
+      filename: 'members/tarou.html',
+    }),
     new CleanWebpackPlugin(),
   ],
 }
