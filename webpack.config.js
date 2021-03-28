@@ -12,13 +12,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css/,
+        test: /\.(css|sass|scss)/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
           },
           {
             loader: 'css-loader',
+          },
+          {
+            loader: 'sass-loader',
           },
         ],
       },
@@ -52,7 +55,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: './stylesheets/main.css'
+      filename: './stylesheets/main.scss'
     }),
     new HtmlWebpackPlugin({
       template: './src/templates/index.pug',
